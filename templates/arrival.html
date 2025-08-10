@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrivals</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Arrival Trains</h2>
+    <table>
+        <tr><th>ID</th><th>Name</th><th>Station</th><th>Time</th><th>Type</th></tr>
+        {% for train in trains %}
+        <tr><td>{{ train[0] }}</td><td>{{ train[1] }}</td><td>{{ train[2] }}</td><td>{{ train[3] }}</td><td>{{ train[4] }}</td></tr>
+        {% endfor %}
+    </table>
+    <nav><a href="/">Home</a></nav>
+</body>
+</html>

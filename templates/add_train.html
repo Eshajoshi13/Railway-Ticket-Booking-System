@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Train</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Add New Train</h2>
+    <form method="post">
+        Name: <input type="text" name="name" required><br>
+        Station: <input type="text" name="station" required><br>
+        Time: <input type="time" name="time" required><br>
+        Type:
+        <select name="type" required>
+            <option value="Arrival">Arrival</option>
+            <option value="Departure">Departure</option>
+        </select><br>
+        <input type="submit" value="Add Train">
+    </form>
+    <nav><a href="/logout">Logout</a></nav>
+</body>
+</html>
